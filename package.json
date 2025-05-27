@@ -1,7 +1,7 @@
 {
   "name": "knights-tour",
   "version": "0.1.0",
-  "homepage": "https://BrunoWebDesigner.github.io/knights-tour",
+  "homepage": "https://brunowebdesigner.github.io/knights-tour/",
   "private": true,
 "scripts": {
     "dev": "next dev",
