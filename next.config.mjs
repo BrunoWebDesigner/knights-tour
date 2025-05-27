@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/knights-tour', // Replace with your repo name
+  basePath: '/knights-tour',
+  assetPrefix: '/knights-tour',
+  trailingSlash: true,
 };
 
 export default nextConfig;

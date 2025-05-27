@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "homepage": "https://brunowebdesigner.github.io/knights-tour/",
   "private": true,
-"scripts": {
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build && cd out && echo. > .nojekyll && cd ..",
+    "deploy": "gh-pages -d out",
+    "export": "next export"
   },
   "dependencies": {
     "next": "15.3.2",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "gh-pages": "^6.3.0",
