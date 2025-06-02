@@ -66,7 +66,7 @@ export default function GameBoard({ boardSize, setIsGameWon }) {
           ${isKnight ? 'font-bold text-6xl text-blue-900' : ''}`}
       >
         {isKnight ? '♞' : isVisited ? (
-    <span className="text-black">{moveNumber}</span>
+    <span className="text-black font-bold">{moveNumber}</span>
   ) : (
     '')}
       </div>
