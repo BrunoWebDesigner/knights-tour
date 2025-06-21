@@ -1,4 +1,4 @@
-'use client'; // Required for client-side interactivity in Next.js App Router
+"use client"
 
 import { useState } from 'react';
 import TitleAndDescription from '../components/TitleAndDescription';
