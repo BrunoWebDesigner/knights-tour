@@ -60,15 +60,16 @@ export default function GameBoard({ boardSize, setIsGameWon }) {
       <div
         key={`${row},${col}`}
         onClick={() => handleSquareClick(row, col)}
-        className={`w-16 h-16 flex items-center justify-center cursor-pointer
+        className={`board-square flex items-center justify-center cursor-pointer
           ${isDark ? 'bg-[#5f664a]' : 'bg-[#d0d2c2]'}
           ${isPossibleMove ? 'border-4 border-blue-400' : ''}
-          ${isKnight ? 'font-bold text-6xl text-blue-900' : ''}`}
+          ${isKnight ? 'knight-icon text-blue-900' : ''}`}
       >
         {isKnight ? '♞' : isVisited ? (
-    <span className="text-black font-bold">{moveNumber}</span>
-  ) : (
-    '')}
+          <span className="text-black font-bold">{moveNumber}</span>
+        ) : (
+          ''
+        )}
       </div>
     );
   };
@@ -77,7 +78,7 @@ export default function GameBoard({ boardSize, setIsGameWon }) {
     <div className="flex items-center justify-center">
       <div
         className="grid gap-0"
-        style={{ gridTemplateColumns: `repeat(${cols}, 64px)` }}
+        style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
       >
         {Array.from({ length: rows }, (_, row) =>
           Array.from({ length: cols }, (_, col) => renderSquare(row, col))
@@ -85,5 +86,4 @@ export default function GameBoard({ boardSize, setIsGameWon }) {
       </div>
     </div>
   );
-
 }
